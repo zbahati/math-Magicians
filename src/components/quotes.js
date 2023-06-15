@@ -28,7 +28,7 @@ const Quotes = () => {
 
   return (
     <div className="quotes-container">
-      <h1>Quotes</h1>
+      <h1> Quotes </h1>
       <ul>
         {
           quotes.map((quote) => (
