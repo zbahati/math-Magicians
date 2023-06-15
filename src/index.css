@@ -10,6 +10,7 @@
   --black-color: black;
   --screen-color: rgb(133, 134, 147);
   --calculator-action-color: rgb(245, 145, 62);
+  --calculator-hover-color: rgb(199, 95, 10);
   --calculator-body-color: rgb(224, 224, 224);
   --calculator-number-color: rgb(69, 77, 89);
   --screen-number-color: rgb(251, 251, 251);
@@ -18,6 +19,10 @@
 body {
   background: var(--azure-color);
   font-family: 'Segoe UI', sans-serif;
+}
+
+button:hover {
+  background-color: var(--calculator-body-color);
 }
 
 .main-body {
@@ -73,10 +78,10 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.func span,
-.number-section span,
-.body-footer span,
-.operator-section span {
+.func button,
+.number-section button,
+.body-footer button,
+.operator-section button {
   border: 1px solid var(--azure-color);
   text-align: center;
   width: 100%;
@@ -93,6 +98,14 @@ body {
   width: 20%;
   grid-template-columns: 1fr;
   background: var(--calculator-action-color);
+}
+
+.operator-section button {
+  background: transparent;
+}
+
+.operator-section button:hover {
+  background: var(--calculator-hover-color);
 }
 
 .body-footer,
